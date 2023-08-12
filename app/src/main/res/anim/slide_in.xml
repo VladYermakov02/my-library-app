@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><!-- if the animation is not complex, 'translate' would be perfect-->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="300"
+    android:fromXDelta="-100%p"
+    android:toXDelta="0%p">
+    <!-- '0' means relative to the width of the start of the screen -->
+    <!-- '0%' means relative to the width of the element -->
+    <!-- '0%p' anim starts from the 0 pixel relative to the parent of the element -->
+    <!-- instead of 0 can be a number between -100 to 100 -->
+
+</translate>

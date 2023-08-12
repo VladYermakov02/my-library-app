@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewBookActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtTxtBookNameChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:hint="@string/book_name_hint"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/txtChangeInfo" />
+
+            <EditText
+                android:id="@+id/edtTxtAuthorNameChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/author_name_hint"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/edtTxtBookNameChange" />
+
+            <EditText
+                android:id="@+id/edtTxtPageNumChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/page_number_hint"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/edtTxtAuthorNameChange" />
+
+            <EditText
+                android:id="@+id/edtTxtShortDescChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/short_description_hint"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/edtTxtPageNumChange" />
+
+            <EditText
+                android:id="@+id/edtTxtLongDescChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/long_description_hint"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/edtTxtShortDescChange" />
+
+            <EditText
+                android:id="@+id/edtTxtReviewChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/your_review_hint"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/edtTxtLongDescChange" />
+
+            <EditText
+                android:id="@+id/edtTxtUrlChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="16dp"
+                android:autofillHints="@string/book_image_url_hint"
+                android:ems="10"
+                android:hint="@string/book_image_url_hint"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/edtTxtReviewChange" />
+
+            <Button
+                android:id="@+id/btnSubmitBookInfoChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/submit_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtTxtUrlChange" />
+
+            <TextView
+                android:id="@+id/txtWarnBookNameChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/warn_book_name"
+                android:textColor="@color/design_default_color_error"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintBottom_toTopOf="@+id/edtTxtBookNameChange" />
+
+            <TextView
+                android:id="@+id/txtWarnAuthorNameChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/warn_author_name"
+                android:textColor="@color/design_default_color_error"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintBottom_toTopOf="@+id/edtTxtAuthorNameChange" />
+
+            <TextView
+                android:id="@+id/txtWarnPageNumChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/warn_page_num"
+                android:textColor="@color/design_default_color_error"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintBottom_toTopOf="@+id/edtTxtPageNumChange" />
+
+            <TextView
+                android:id="@+id/txtWarnShortDescChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/warn_short_desc"
+                android:textColor="@color/design_default_color_error"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintBottom_toTopOf="@+id/edtTxtShortDescChange" />
+
+            <TextView
+                android:id="@+id/txtWarnLongDescChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/warn_long_desc"
+                android:textColor="@color/design_default_color_error"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintBottom_toTopOf="@+id/edtTxtLongDescChange" />
+
+            <TextView
+                android:id="@+id/txtWarnReviewChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/warn_enter_review"
+                android:textColor="@color/design_default_color_error"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintBottom_toTopOf="@+id/edtTxtReviewChange" />
+
+            <TextView
+                android:id="@+id/txtWarnUrlChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/warn_book_image_url"
+                android:textColor="@color/design_default_color_error"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintBottom_toTopOf="@+id/edtTxtUrlChange" />
+
+            <TextView
+                android:id="@+id/txtChangeInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/change_info"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="40dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>
